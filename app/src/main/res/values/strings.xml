@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MaxSales</string>
+    <string name="base_url">http://10.0.2.2:3333/</string>
+<!--    <string name="base_url">https://boxlivros.fly.dev/</string>-->
 </resources>
