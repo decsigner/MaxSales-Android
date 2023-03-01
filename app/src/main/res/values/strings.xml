@@ -2,4 +2,12 @@
     <string name="app_name">MaxSales</string>
     <string name="base_url">http://10.0.2.2:3333/</string>
 <!--    <string name="base_url">https://boxlivros.fly.dev/</string>-->
+    <string name="about_text"><![CDATA[<h3>QUEM SOMOS</h3>
+Nós somos a Max Sales, um aplicativo que atua na área de descontos e benefícios, oferecendo praticidade e acessibilidade na palma da sua mão!<br />
+Visamos atender variados públicos que não possuem acesso a uma qualidade excepcional de vida, promovendo acessibilidade à saúde, educação, cultura e segurança com mais facilidade através do nosso aplicativo de benefícios.<br />
+Nosso aplicativo visa abranger todas as necessidades do nosso cliente em um só lugar! Otimizando o seu tempo, oferecendo rapidez e economia sem sair de casa.<br /><br />
+Dentre nosso aplicativo possuímos as seguintes categorias:<br />
+Max Educacional, Max Saúde, Max Fitness, Max Seguros, Max Pet, Max Turismo<br /> <br />
+As categorias acima contam com descontos para cada especialidade para assim atender todas as carências de nossos usuários.<br />
+Nossa Matriz está localizada no centro de São Paulo, SP. na rua Libero Badaró, no bairro do Anhangabaú, local onde nossa equipe realiza toda a gestão e metodologia da nossa empresa.]]></string>
 </resources>

@@ -6,13 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-//import com.otokansosoti.maxsales.about.AboutActivity
+import com.otokansosoti.maxsales.about.AboutActivity
 import com.otokansosoti.maxsales.databinding.FragmentHomeBinding
 import com.otokansosoti.maxsales.fragment.home.adapter.HomeAdapter
 import com.otokansosoti.maxsales.fragment.home.viewHolder.product.ProductViewModel
@@ -33,6 +32,7 @@ class HomeFragment : Fragment() {
         viewModel = createViewModel()
         productViewModel = createProductViewModel()
         setupObservers()
+        configureActions()
         viewModel.loadHomeList(this.requireContext())
         return binding.root
     }
@@ -93,8 +93,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun showAbout() {
-//        val intent = Intent(this.requireContext(), AboutActivity::class.java)
-//        startActivity(intent)
+        val intent = Intent(this.requireContext(), AboutActivity::class.java)
+        startActivity(intent)
     }
 
     private fun showSales() {
