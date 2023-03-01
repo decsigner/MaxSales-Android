@@ -1,6 +1,6 @@
 package com.otokansosoti.maxsales.network
 
-//import com.otokansosoti.maxsales.editprofile.UpdateProfileModel
+import com.otokansosoti.maxsales.editprofile.UpdateProfileModel
 import com.otokansosoti.maxsales.fragment.profile.ProfileModel
 import com.otokansosoti.maxsales.fragment.home.HomeModel
 import com.otokansosoti.maxsales.login.LoginModel
@@ -21,8 +21,8 @@ interface Endpoint {
     @GET("users/purchases")
     fun getUserPurchases(@Header("Authorization") token: String): Call<List<HomeModel>>
 
-//    @PUT("users")
-//    fun updateProfile(@Header("Authorization") token: String, @Body userData: UpdateProfileModel) : Call<ProfileModel>
+    @PUT("users")
+    fun updateProfile(@Header("Authorization") token: String, @Body userData: UpdateProfileModel) : Call<ProfileModel>
 
     @GET("home")
     fun getHomeList(@Header("Authorization") token: String) : Call<List<HomeModel>>

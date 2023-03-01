@@ -26,5 +26,6 @@
 
         <activity android:name=".root.RootActivity"/>
         <activity android:name=".about.AboutActivity"/>
+        <activity android:name=".editprofile.EditProfileActivity"/>
     </application>
 </manifest>

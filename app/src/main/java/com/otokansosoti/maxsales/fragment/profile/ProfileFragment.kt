@@ -15,7 +15,7 @@ import com.otokansosoti.maxsales.databinding.FragmentProfileBinding
 import com.otokansosoti.maxsales.fragment.home.HomeModel
 import com.otokansosoti.maxsales.fragment.profile.adapter.ProfileAdapter
 
-//import com.otokansosoti.maxsales.editprofile.EditProfileActivity
+import com.otokansosoti.maxsales.editprofile.EditProfileActivity
 
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
@@ -60,11 +60,10 @@ class ProfileFragment : Fragment() {
 
         val editProfileButton: Button = binding.editButton
         editProfileButton.setOnClickListener {
-//            val intent = Intent(this.requireContext(), EditProfileActivity::class.java)
-//            intent.putExtra("XName", binding.nameLabel.text)
-//            intent.putExtra("XEmail", binding.emailLabel.text)
-//            intent.putExtra("XCPF", binding.cpfLabel.text)
-//            startActivity(intent)
+            val intent = Intent(this.requireContext(), EditProfileActivity::class.java)
+            intent.putExtra("XName", binding.nameLabel.text)
+            intent.putExtra("XEmail", binding.emailLabel.text)
+            startActivity(intent)
         }
     }
 
