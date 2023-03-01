@@ -9,8 +9,12 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.otokansosoti.maxsales.common.popToRoot
 import com.otokansosoti.maxsales.databinding.FragmentProfileBinding
+import com.otokansosoti.maxsales.fragment.home.HomeModel
+import com.otokansosoti.maxsales.fragment.profile.adapter.ProfileAdapter
+
 //import com.otokansosoti.maxsales.editprofile.EditProfileActivity
 
 class ProfileFragment : Fragment() {
@@ -44,6 +48,7 @@ class ProfileFragment : Fragment() {
     private fun setupObservables() {
         viewModel.showToastError().observe(this.viewLifecycleOwner) { showToast(it) }
         viewModel.bindingProfile().observe(this.viewLifecycleOwner) { setupProfileUser(it) }
+        viewModel.bindingPurchases().observe(this.viewLifecycleOwner) { setupPurchasesList(it) }
     }
 
     private fun setupActions() {
@@ -67,6 +72,14 @@ class ProfileFragment : Fragment() {
         binding.nameLabel.text = model.name
         binding.emailLabel.text = model.email
         binding.cpfLabel.text = model.cpf
+    }
+
+    private fun setupPurchasesList(dataSource: List<HomeModel>) {
+        val recyclerView = binding.recyclerView
+        val adapter = ProfileAdapter(dataSource, this.viewLifecycleOwner)
+
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this.requireContext())
     }
 
     private fun showToast(message: String) {

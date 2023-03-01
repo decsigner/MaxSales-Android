@@ -18,6 +18,9 @@ interface Endpoint {
     @GET("users")
     fun getProfile(@Header("Authorization") token: String) : Call<ProfileModel>
 
+    @GET("users/purchases")
+    fun getUserPurchases(@Header("Authorization") token: String): Call<List<HomeModel>>
+
 //    @PUT("users")
 //    fun updateProfile(@Header("Authorization") token: String, @Body userData: UpdateProfileModel) : Call<ProfileModel>
 
