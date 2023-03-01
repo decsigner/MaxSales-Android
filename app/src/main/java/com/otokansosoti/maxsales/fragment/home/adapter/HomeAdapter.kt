@@ -1,6 +1,7 @@
 package com.otokansosoti.maxsales.fragment.home.adapter
 
 import android.app.Application
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
@@ -16,7 +17,7 @@ import com.otokansosoti.maxsales.fragment.home.viewHolder.LogoViewHolder
 import com.otokansosoti.maxsales.fragment.home.viewHolder.product.ProductViewHolder
 import com.otokansosoti.maxsales.fragment.home.viewHolder.product.ProductViewModel
 
-class HomeAdapter (private val dataSource: List<HomeModel>, private val lifecycleOwner: LifecycleOwner, private val productViewModel: ProductViewModel) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeAdapter (private val dataSource: List<HomeModel>, private val lifecycleOwner: LifecycleOwner, private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     interface onItemClickListener {
         fun onItemClick(position: Int)
     }
@@ -53,7 +54,7 @@ class HomeAdapter (private val dataSource: List<HomeModel>, private val lifecycl
             }
             else -> {
                 val itemBinding = ViewholderProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                viewHolder = ProductViewHolder(itemBinding, mListener, productViewModel, lifecycleOwner)
+                viewHolder = ProductViewHolder(itemBinding, mListener, context)
             }
         }
         return viewHolder

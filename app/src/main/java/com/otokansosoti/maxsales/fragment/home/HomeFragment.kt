@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
 
     private fun setupHomeList(dataSource: List<HomeModel>) {
         val recyclerView = binding.recyclerView
-        val adapter = HomeAdapter(dataSource, this.viewLifecycleOwner, productViewModel)
+        val adapter = HomeAdapter(dataSource, this.viewLifecycleOwner, this.requireContext())
 
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this.requireContext())

@@ -1,7 +1,9 @@
 package com.otokansosoti.maxsales.fragment.home.viewHolder.product
 
 import android.app.Application
+import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,8 +14,14 @@ import com.otokansosoti.maxsales.R
 import com.otokansosoti.maxsales.databinding.ViewholderProductBinding
 import com.otokansosoti.maxsales.fragment.home.HomeModel
 import com.otokansosoti.maxsales.fragment.home.adapter.HomeAdapter
+import com.otokansosoti.maxsales.network.Endpoint
+import com.otokansosoti.maxsales.network.Network
+import okhttp3.ResponseBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class ProductViewHolder(private val itemBinding: ViewholderProductBinding, listener: HomeAdapter.onItemClickListener, private val viewModel: ProductViewModel, private val lifecycleOwner: LifecycleOwner,): RecyclerView.ViewHolder(itemBinding.root), View.OnClickListener {
+class ProductViewHolder(private val itemBinding: ViewholderProductBinding, listener: HomeAdapter.onItemClickListener, private val context: Context): RecyclerView.ViewHolder(itemBinding.root), View.OnClickListener {
 
     private val iconProduct: ImageView = itemBinding.iconProduct
     private val titleLabel: TextView = itemBinding.titleLabel
@@ -26,15 +34,31 @@ class ProductViewHolder(private val itemBinding: ViewholderProductBinding, liste
     }
 
     fun bind(model: HomeModel) {
-        viewModel.showBitMapIMage().observe(lifecycleOwner) { setIcon(it) }
-        viewModel.loadImage(model.image)
-
+        loadImage(model.image)
         titleLabel.text = model.title
         infoLabel.text = model.info
     }
 
-    fun setIcon(bitmap: Bitmap) {
-        iconProduct.setImageBitmap(bitmap)
+    private fun loadImage(imageName: String) {
+        val baseUrl = context.applicationContext.resources.getString(R.string.base_url)
+        val server = Network.getRetrofitInstance(baseUrl)
+        val endpoint = server.create(Endpoint::class.java)
+        val callback = endpoint.getImage(imageName)
+
+        callback.enqueue(object : Callback<ResponseBody> {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                if (response.code() == 200) {
+                    response.body()?.let {
+                        val bytes = it.bytes()
+                        iconProduct.setImageBitmap(BitmapFactory.decodeByteArray(bytes, 0, bytes.size))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 
     override fun onClick(p0: View?) {}

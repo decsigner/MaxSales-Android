@@ -42,8 +42,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
                 if (response.code() == 200) {
                     response.body()?.let {
                         val dataSource: MutableList<HomeModel> = it.toMutableList()
-                        val firstObjectHelp = dataSource.find { it.type == "help" }
-                        dataSource.remove(firstObjectHelp)
+                        val helpers = dataSource.filter { it.type == "help" }
+                        val logoObject = dataSource.find { it.type == "logo" }
+                        dataSource.remove(logoObject)
+                        dataSource.removeAll(helpers)
 
                         homeList.value = dataSource.toList()
                     }

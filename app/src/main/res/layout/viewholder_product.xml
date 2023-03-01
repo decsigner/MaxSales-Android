@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_marginTop="10dp"
-    android:background="@drawable/gray_rounded_corner"
+    android:background="@drawable/white_rounded_corner"
     tools:context=".fragment.home.viewHolder.product.ProductViewHolder"
     tools:ignore="ResourceName">
 
