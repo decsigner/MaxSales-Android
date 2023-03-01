@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/max_background_light_gray"
     tools:context=".fragment.ContactsFragment"
     tools:ignore="ResourceName">
 
@@ -15,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        android:background="@drawable/gray_rounded_corner"
+        android:background="@drawable/white_rounded_corner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -34,8 +35,8 @@
             android:id="@+id/sac_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="(11) 93741-4931"
-            android:background="@drawable/gray_rounded_corner"
+            android:text="08005911946"
+            android:background="@drawable/white_rounded_corner"
             android:textSize="18sp"
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
@@ -48,7 +49,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        android:background="@drawable/gray_rounded_corner"
+        android:background="@drawable/white_rounded_corner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -67,8 +68,8 @@
             android:id="@+id/email_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="contato@contato.com.br"
-            android:background="@drawable/gray_rounded_corner"
+            android:text="contato@salesmax.com.br"
+            android:background="@drawable/white_rounded_corner"
             android:textSize="18sp"
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
@@ -80,7 +81,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        android:background="@drawable/gray_rounded_corner"
+        android:background="@drawable/white_rounded_corner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -99,8 +100,8 @@
             android:id="@+id/site_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="boxlivros.com.br"
-            android:background="@drawable/gray_rounded_corner"
+            android:text="salesmax.com.br"
+            android:background="@drawable/white_rounded_corner"
             android:textSize="18sp"
             style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>

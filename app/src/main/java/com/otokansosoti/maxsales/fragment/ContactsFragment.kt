@@ -26,24 +26,25 @@ class ContactsFragment : Fragment() {
 
     private fun setupActions() {
         val sacButton: Button = binding.sacButton
+        val phoneURI = Uri.parse("tel:08005911946")
         sacButton.setOnClickListener {
-            val whatsUrl = "https://api.whatsapp.com/send?phone=5511937414931"
-            val whatsIntent = Intent(Intent.ACTION_VIEW)
-            whatsIntent.setData(Uri.parse(whatsUrl))
-            startActivity(whatsIntent)
+            val dialIntent = Intent(Intent.ACTION_DIAL).also {
+                it.setData(phoneURI)
+            }
+            startActivity(dialIntent)
         }
 
         val mailButton: Button = binding.emailButton
         mailButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "plain/text"
-            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("contato@contato.address"))
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("contato@salesmax.com.br"))
             startActivity(Intent.createChooser(intent, ""))
         }
 
         val siteButton: Button = binding.siteButton
         siteButton.setOnClickListener {
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.boxlivros.com.br"))
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.salesmax.com.br"))
             startActivity(browserIntent)
         }
     }
