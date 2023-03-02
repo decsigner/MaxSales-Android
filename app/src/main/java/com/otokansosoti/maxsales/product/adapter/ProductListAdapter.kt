@@ -10,10 +10,19 @@ import com.otokansosoti.maxsales.fragment.home.HomeModel
 import com.otokansosoti.maxsales.fragment.home.viewHolder.product.ProductViewHolder
 import com.otokansosoti.maxsales.product.viewholder.ProductItemViewHolder
 
-class ProductListAdapter(private val dataSource: List<HomeModel>, private val lifecycleOwner: LifecycleOwner) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ProductListAdapter(private val dataSource: List<HomeModel>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    interface onItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    private lateinit var mListener: onItemClickListener
+
+    fun setOnItemClickListener(listener: onItemClickListener) {
+        mListener = listener
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val itemBinding = ViewholderProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ProductItemViewHolder(itemBinding, parent.context)
+        return ProductItemViewHolder(itemBinding, mListener, parent.context)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

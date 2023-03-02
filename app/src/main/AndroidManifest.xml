@@ -28,5 +28,6 @@
         <activity android:name=".about.AboutActivity"/>
         <activity android:name=".editprofile.EditProfileActivity"/>
         <activity android:name=".product.ProdutListActivity"/>
+        <activity android:name=".webview.WebViewActivity"/>
     </application>
 </manifest>

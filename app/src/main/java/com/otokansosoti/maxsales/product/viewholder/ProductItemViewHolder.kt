@@ -12,15 +12,22 @@ import com.otokansosoti.maxsales.fragment.home.HomeModel
 import com.otokansosoti.maxsales.fragment.home.adapter.HomeAdapter
 import com.otokansosoti.maxsales.network.Endpoint
 import com.otokansosoti.maxsales.network.Network
+import com.otokansosoti.maxsales.product.adapter.ProductListAdapter
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ProductItemViewHolder(private val itemBinding: ViewholderProductBinding, private val context: Context): RecyclerView.ViewHolder(itemBinding.root) {
+class ProductItemViewHolder(private val itemBinding: ViewholderProductBinding, listener: ProductListAdapter.onItemClickListener, private val context: Context): RecyclerView.ViewHolder(itemBinding.root), View.OnClickListener {
     private val iconProduct: ImageView = itemBinding.iconProduct
     private val titleLabel: TextView = itemBinding.titleLabel
     private val infoLabel: TextView = itemBinding.infoLabel
+
+    init {
+        itemView.setOnClickListener {
+            listener.onItemClick(adapterPosition)
+        }
+    }
 
     fun bind(model: HomeModel) {
         loadImage(model.image)
@@ -49,4 +56,6 @@ class ProductItemViewHolder(private val itemBinding: ViewholderProductBinding, p
             }
         })
     }
+
+    override fun onClick(p0: View?) {}
 }
