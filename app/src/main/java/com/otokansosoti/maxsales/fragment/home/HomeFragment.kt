@@ -16,6 +16,7 @@ import com.otokansosoti.maxsales.databinding.FragmentHomeBinding
 import com.otokansosoti.maxsales.fragment.home.adapter.HomeAdapter
 import com.otokansosoti.maxsales.fragment.home.viewHolder.product.ProductViewModel
 import com.otokansosoti.maxsales.fragment.home.viewHolder.product.ProductViewModelFactory
+import com.otokansosoti.maxsales.product.ProdutListActivity
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -79,7 +80,7 @@ class HomeFragment : Fragment() {
             override fun onItemClick(position: Int) {
                 var model = dataSource[position]
                 if (model.type == "product" && model.available) {
-                    showProductList()
+                    showProductList(model)
                 } else if (model.type == "product" && !model.available) {
                     Toast.makeText(this@HomeFragment.context, "Seu plano não está liberado para este serviço.", Toast.LENGTH_SHORT).show()
                 }
@@ -88,8 +89,11 @@ class HomeFragment : Fragment() {
     }
 
 
-    private fun showProductList() {
-
+    private fun showProductList(model: HomeModel) {
+        val intent = Intent(this.requireContext(), ProdutListActivity::class.java)
+        intent.putExtra("XCategoryId", model.id)
+        intent.putExtra("XCategoryName", model.title)
+        startActivity(intent)
     }
 
     private fun showAbout() {

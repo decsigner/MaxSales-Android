@@ -29,4 +29,7 @@ interface Endpoint {
 
     @GET("files/{imageName}")
     fun getImage(@Path("imageName") imageName: String) : Call<ResponseBody>
+
+    @GET("products/{categoryId}")
+    fun getProductsByCategory(@Header("Authorization") token: String, @Path("categoryId") categoryId: String) : Call<List<HomeModel>>
 }

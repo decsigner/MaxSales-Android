@@ -27,5 +27,6 @@
         <activity android:name=".root.RootActivity"/>
         <activity android:name=".about.AboutActivity"/>
         <activity android:name=".editprofile.EditProfileActivity"/>
+        <activity android:name=".product.ProdutListActivity"/>
     </application>
 </manifest>
