@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MaxSales</string>
-    <string name="base_url">http://10.0.2.2:3333/</string>
-<!--    <string name="base_url">https://boxlivros.fly.dev/</string>-->
+<!--    <string name="base_url">http://10.0.2.2:3333/</string>-->
+    <string name="base_url">https://max-sales-backend.fly.dev/</string>
     <string name="about_text"><![CDATA[<h3>QUEM SOMOS</h3>
 Nós somos a Max Sales, um aplicativo que atua na área de descontos e benefícios, oferecendo praticidade e acessibilidade na palma da sua mão!<br />
 Visamos atender variados públicos que não possuem acesso a uma qualidade excepcional de vida, promovendo acessibilidade à saúde, educação, cultura e segurança com mais facilidade através do nosso aplicativo de benefícios.<br />
