@@ -1,12 +1,15 @@
 package com.otokansosoti.maxsales.product
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.otokansosoti.maxsales.databinding.ActivityProductListBinding
+import com.otokansosoti.maxsales.detail.DetailActivity
+import com.otokansosoti.maxsales.detail.DetailFactory
 import com.otokansosoti.maxsales.fragment.home.HomeModel
 import com.otokansosoti.maxsales.product.adapter.ProductListAdapter
 import com.otokansosoti.maxsales.root.RootActivity
@@ -49,10 +52,42 @@ class ProdutListActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter.setOnItemClickListener(object: ProductListAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
-                val webViewUrl = dataSource[position].link_action
-                openWebView(webViewUrl)
+                val source = dataSource[position]
+                choiceToOpen(source.link_type, source.link_action)
             }
         })
+    }
+
+    private fun choiceToOpen(type: String, action: String){
+        when (type) {
+            "webview" -> {
+                openWebView(action)
+            }
+            "phone" -> {
+                openPhone(action)
+            }
+            "controller" -> {
+                openActivity(action)
+            }
+            else -> {
+                showErrorToast("Houve um erro, tente novamente mais tarde!")
+            }
+        }
+    }
+
+    private fun openPhone(phone: String) {
+        val phoneURI = Uri.parse("tel:"+phone)
+        val dialIntent = Intent(Intent.ACTION_DIAL).also {
+            it.setData(phoneURI)
+        }
+        startActivity(dialIntent)
+    }
+
+    private fun openActivity(name: String) {
+        val detail = DetailFactory.fromString(name, this)
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("XModel", detail)
+        startActivity(intent)
     }
 
     private fun openWebView(url: String) {
