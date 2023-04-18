@@ -40,34 +40,34 @@
                 android:padding="8dp"
                 android:background="@drawable/white_rounded_corner"
                 android:scaleType="centerCrop"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="48dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/logo"
                 android:src="@drawable/quem_somos"
                 android:contentDescription="quem somos"/>
 
-            <ImageButton
-                android:id="@+id/sales_button"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/white_rounded_corner"
-                android:contentDescription="vendas"
-                android:padding="8dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/sales"
-                app:layout_constraintEnd_toStartOf="@+id/sac_button"
-                app:layout_constraintStart_toEndOf="@+id/about_button"
-                app:layout_constraintTop_toBottomOf="@+id/logo" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/sales_button"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:background="@drawable/white_rounded_corner"-->
+<!--                android:contentDescription="vendas"-->
+<!--                android:padding="8dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/sales"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/sac_button"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/about_button"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/logo" />-->
 
             <ImageButton
                 android:id="@+id/sac_button"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="48dp"
                 android:background="@drawable/white_rounded_corner"
                 android:contentDescription="sac"
                 android:padding="8dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 android:src="@drawable/sac"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/logo" />

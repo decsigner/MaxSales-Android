@@ -68,7 +68,10 @@ enum class DetailFactory {
                 else -> "(11) 97292-2649"
             },
             phoneLabel = context.getString(R.string.outrasLocalidades),
-            phoneContent = "0800 591 0432"
+            phoneContent = when (this) {
+                MORTEACIDENTAL, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO, FUNERAL -> "0800 709 8059"
+                else -> "0800 591 0432"
+            }
         )
 
         return model

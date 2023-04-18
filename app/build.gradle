@@ -37,6 +37,7 @@ android {
     viewBinding {
         enabled = true
     }
+    namespace 'com.otokansosoti.maxsales'
 
 //    buildFeatures {
 //        parcelize true

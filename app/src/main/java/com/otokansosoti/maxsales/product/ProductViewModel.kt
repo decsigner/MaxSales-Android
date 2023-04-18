@@ -2,6 +2,7 @@ package com.otokansosoti.maxsales.product
 
 import android.app.Application
 import android.content.Context
+import android.graphics.Color
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -52,6 +53,20 @@ class ProductViewModel(application: Application) : AndroidViewModel(application)
                 updateToastError(t.message)
             }
         })
+    }
+    
+    fun getBackgroudColorByCategorie(title: String?): Int {
+        var categoryName = title?.split(" ")?.lastOrNull()
+        if (categoryName != null) {
+            if (categoryName == "SAÚDE") { categoryName = "SAUDE" }
+            return try {
+                CategoryColor.valueOf(categoryName.toUpperCase()).color
+            } catch (e: IllegalArgumentException) {
+                Color.rgb(255,255,255)
+            }
+        }
+
+        return Color.rgb(255,255,255)
     }
 
     private fun updateToastError(message: String?) {

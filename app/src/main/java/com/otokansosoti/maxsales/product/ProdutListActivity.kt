@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.otokansosoti.maxsales.databinding.ActivityProductListBinding
 import com.otokansosoti.maxsales.detail.DetailActivity
 import com.otokansosoti.maxsales.detail.DetailFactory
@@ -29,6 +30,9 @@ class ProdutListActivity : AppCompatActivity() {
 
         val categoryId = intent.getStringExtra("XCategoryId")
         val categoryName = intent.getStringExtra("XCategoryName")
+        val recyclerView: RecyclerView = binding.recyclerView
+        recyclerView.setBackgroundColor(viewModel.getBackgroudColorByCategorie(categoryName))
+        view.setBackgroundColor(viewModel.getBackgroudColorByCategorie(categoryName))
         binding.categoryTitle.text = categoryName
         if (categoryId != null) {
             viewModel.loadProdutsBy(categoryId, this)

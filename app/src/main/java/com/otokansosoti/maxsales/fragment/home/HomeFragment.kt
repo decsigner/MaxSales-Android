@@ -59,10 +59,10 @@ class HomeFragment : Fragment() {
             showAbout()
         }
 
-        val salesButton: ImageButton = binding.salesButton
-        salesButton.setOnClickListener {
-            showSales()
-        }
+//        val salesButton: ImageButton = binding.salesButton
+//        salesButton.setOnClickListener {
+//            showSales()
+//        }
 
         val sacButton: ImageButton = binding.sacButton
         sacButton.setOnClickListener {
