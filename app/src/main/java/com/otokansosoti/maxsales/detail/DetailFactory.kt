@@ -14,7 +14,8 @@ enum class DetailFactory {
     INSPECAO,
     FUNERAL,
     MORTEACIDENTAL,
-    PET;
+    PET,
+    MEDICAMENTOGRATIS;
 
     companion object {
         fun fromString(str: String, context: Context): DetailBinding {
@@ -42,9 +43,11 @@ enum class DetailFactory {
                 FUNERAL -> "Funeral"
                 MORTEACIDENTAL -> "Morte Acidental"
                 PET -> "Pet"
+                MEDICAMENTOGRATIS -> "Assistência Medicamentos"
             },
             image = when (this) {
                 CONSULTA, EXAMES, DENTISTA -> "produto_saude"
+                MEDICAMENTOGRATIS -> "logo_sabemi"
                 else -> "previsul"
             },
             text = when (this) {
@@ -61,15 +64,18 @@ enum class DetailFactory {
                 FUNERAL -> context.getString(R.string.funeralText)
                 MORTEACIDENTAL -> context.getString(R.string.morteAcidentalText)
                 PET -> context.getString(R.string.assistenciaPetText)
+                MEDICAMENTOGRATIS -> context.getString(R.string.medicamentoGratisText)
             },
             whatsappLabel = context.getString(R.string.capitais),
             whastappContent = when (this) {
                 PERSONALFITNESS, NUTRICIONAL, CHECKUP, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO -> "(11) 3003-6773"
+                MEDICAMENTOGRATIS -> ""
                 else -> "(11) 97292-2649"
             },
             phoneLabel = context.getString(R.string.outrasLocalidades),
             phoneContent = when (this) {
                 MORTEACIDENTAL, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO, FUNERAL -> "0800 709 8059"
+                MEDICAMENTOGRATIS -> "0800 721 3874"
                 else -> "0800 591 0432"
             }
         )

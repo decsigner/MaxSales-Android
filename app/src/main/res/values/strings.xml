@@ -25,5 +25,22 @@ Nossa Matriz está localizada no centro de São Paulo, SP. na rua Libero Badaró
     <string name="funeralText">Com a Assistência Funeral, a Previsul faz tudo pra realizar um funeral dentro dos padrões que você escolher na contratação. A família entra em contato com a central de atendimento e a assistência se encarrega de acionar uma funerária e acompanhar todo o serviço. Este serviço tem extensão em todo o território brasileiro, com cobertura de até R$ 5 mil reais.</string>
     <string name="morteAcidentalText">é a garantia do pagamento do Capital Segurado ao(s) beneficiário(s), em caso de morte do Segurado ocasionada pelo evento, sendo um capital de até 10Mil para o titular e de até 5Mil para o cônjuge acidente pessoal, ocorrido durante a vigência do Seguro.</string>
     <string name="assistenciaPetText">Tratamento VIP para seu animalzinho, com esta assistência seu Pet terá um tratamento exclusivo, com direito a transporte emergencial, assistência emergencial, consultas, envio de ração e muito mais.</string>
+    <string name="medicamentoGratisText"><![CDATA[<b>Condições Gerais</b>
+    <p>Horário de Atendimento: De segunda a sexta-feira, das 8h às 18h, exceto feriados.</p>
 
+    <p><b>Âmbito Territorial:</b> Abrangência nacional.</p>
+
+    <p><b>Eventos Cobertos:</b> Subsídio de medicamentos genéricos, desde que com prescrição médica em nome do segurado com carimbo do médico com CRM e CID, e desde que mantido o pagamento do seguro em dia.</p>
+
+    <p><b>Limite de Utilizações:</b> 01 (uma) utilização do serviço por mês e limitado a 06 (seis) vezes por ano de vigência do seguro.</p>
+
+    <p><b>Limite Mensal:</b> Até R$ 150,00 (Cento e Cinquenta Reais).</p>
+
+    <p><b>Carência:</b> Para início da utilização deste serviço haverá uma carência de 3 (três) meses, contados a partir da data de início de vigência do seguro, ou seja, durante este período o segurado não tem direito a utilização dos serviços.</p>
+
+    <p><b>Segurado:</b> Entende-se por Segurado, a pessoa física residente no Brasil, titular que tenha contratado o seguro.</p>
+
+    <p><b>Evento:</b> É a necessidade de compra de medicamentos.</p>
+
+    <p><b>Assistência:</b> É o serviço que será prestado obedecendo-se as condições gerais deste regulamento.</p>]]></string>
 </resources>
