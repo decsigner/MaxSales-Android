@@ -35,7 +35,7 @@
             android:id="@+id/sac_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="08005911946"
+            android:text="0800 19 12486"
             android:background="@drawable/white_rounded_corner"
             android:textSize="18sp"
             style="?android:attr/borderlessButtonStyle"/>

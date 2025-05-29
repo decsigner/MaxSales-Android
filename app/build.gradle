@@ -12,9 +12,9 @@ android {
     defaultConfig {
         applicationId "com.otokansosoti.maxsales"
         minSdk 22
-        targetSdk 33
-        versionCode 4
-        versionName "1.2.0"
+        targetSdk 34
+        versionCode 8
+        versionName "1.5.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

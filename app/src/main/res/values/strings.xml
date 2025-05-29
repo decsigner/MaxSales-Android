@@ -3,13 +3,15 @@
 <!--    <string name="base_url">http://10.0.2.2:3333/</string>-->
     <string name="base_url">https://max-sales-backend.fly.dev/</string>
     <string name="about_text"><![CDATA[<h3>QUEM SOMOS</h3>
-Nós somos a Max Sales, um aplicativo que atua na área de descontos e benefícios, oferecendo praticidade e acessibilidade na palma da sua mão!<br />
-Visamos atender variados públicos que não possuem acesso a uma qualidade excepcional de vida, promovendo acessibilidade à saúde, educação, cultura e segurança com mais facilidade através do nosso aplicativo de benefícios.<br />
-Nosso aplicativo visa abranger todas as necessidades do nosso cliente em um só lugar! Otimizando o seu tempo, oferecendo rapidez e economia sem sair de casa.<br /><br />
-Dentre nosso aplicativo possuímos as seguintes categorias:<br />
-Max Educacional, Max Saúde, Max Fitness, Max Seguros, Max Pet, Max Turismo<br /> <br />
-As categorias acima contam com descontos para cada especialidade para assim atender todas as carências de nossos usuários.<br />
-Nossa Matriz está localizada no centro de São Paulo, SP. na rua Libero Badaró, no bairro do Anhangabaú, local onde nossa equipe realiza toda a gestão e metodologia da nossa empresa.]]></string>
+Somos uma empresa inovadora em serviços e benefícios.<br />
+Acreditamos que podemos oferecer serviços de qualidade e com economia<br /><br/>
+<B>PLANOS SOB MEDIDA</B><br /><br />
+Criamos 3 planos sob medida para você e sua família.<br /> <br />
+Mas se preferir, podemos personalizar os serviços conforme suas necessidades.<br />
+Visamos atender variados públicos, promovendo acessibilidade à saúde, educação, cultura e segurança com mais facilidades através do nosso aplicativo de benefícios. <br />
+
+Otimizando o seu tempo, oferecendo rapidez e economia sem sair de casa.
+]]></string>
     <string name="capitais">Capitais e Cidades Metropolitanas</string>
     <string name="outrasLocalidades">Demais Localidades</string>
     <string name="consultaText">Consultas e exames com até 70% de economia.\nSão mais de 1.800 locais de atendimento com profissionais excelentes, prontos para te atender e auxiliar no que for preciso.\n\n✅ Clínico Geral\n✅ Ginecologista\n✅ Pediatra\n✅ Geriatra\n✅ Ortopedista</string>
@@ -24,7 +26,7 @@ Nossa Matriz está localizada no centro de São Paulo, SP. na rua Libero Badaró
     <string name="inspecaoText">A Assistência Inspeção Domiciliar é um serviço de mão de obra especializada para realizar inspeção domiciliar preventiva e manutenção em alguns itens da sua casa. Se for preciso e possível, a equipe realiza pequenos reparos, revisões ou instalações.</string>
     <string name="funeralText">Com a Assistência Funeral, a Previsul faz tudo pra realizar um funeral dentro dos padrões que você escolher na contratação. A família entra em contato com a central de atendimento e a assistência se encarrega de acionar uma funerária e acompanhar todo o serviço. Este serviço tem extensão em todo o território brasileiro, com cobertura de até R$ 5 mil reais.</string>
     <string name="morteAcidentalText">é a garantia do pagamento do Capital Segurado ao(s) beneficiário(s), em caso de morte do Segurado ocasionada pelo evento, sendo um capital de até 10Mil para o titular e de até 5Mil para o cônjuge acidente pessoal, ocorrido durante a vigência do Seguro.</string>
-    <string name="assistenciaPetText">Tratamento VIP para seu animalzinho, com esta assistência seu Pet terá um tratamento exclusivo, com direito a transporte emergencial, assistência emergencial, consultas, envio de ração e muito mais.</string>
+    <string name="assistenciaPetText">Tratamento VIP para seu animalzinho, com esta assistência seu Pet terá um tratamento exclusivo, com direito a transporte emergencial, assistência emergencial, consultas, envio de ração e muito mais.\n\nWhatsApp\n\nAtendimento de segunda-feira à sexta-feira, das 8h às 18h\n\nUtilize o seu aplicativo de mensagens para falar com a gente</string>
     <string name="medicamentoGratisText"><![CDATA[<b>Condições Gerais</b>
     <p>Horário de Atendimento: De segunda a sexta-feira, das 8h às 18h, exceto feriados.</p>
 
@@ -42,5 +44,8 @@ Nossa Matriz está localizada no centro de São Paulo, SP. na rua Libero Badaró
 
     <p><b>Evento:</b> É a necessidade de compra de medicamentos.</p>
 
-    <p><b>Assistência:</b> É o serviço que será prestado obedecendo-se as condições gerais deste regulamento.</p>]]></string>
+    <p><b>Assistência:</b> É o serviço que será prestado obedecendo-se as condições gerais deste regulamento.</p>
+
+    <p>Acionamento de Assistência</p>
+    <p>O serviço de assistência 24h deverá ser acionado através do telefone abaixo:</p>]]></string>
 </resources>

@@ -109,7 +109,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showSac() {
-        val whatsUrl = "https://api.whatsapp.com/send?phone=5511939466858"
+        val whatsUrl = "https://api.whatsapp.com/send?phone=5511972922649"
         val whatsIntent = Intent(Intent.ACTION_VIEW)
         whatsIntent.setData(Uri.parse(whatsUrl))
         startActivity(whatsIntent)
