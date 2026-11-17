@@ -70,6 +70,7 @@ enum class DetailFactory {
             whastappContent = when (this) {
                 PERSONALFITNESS, NUTRICIONAL, CHECKUP, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO -> "(11) 3003-6773"
                 MEDICAMENTOGRATIS, PET -> "(51) 99528-0140"
+                CONSULTA, EXAMES, DENTISTA -> "(11) 93946-6858"
                 else -> "(11) 97292-2649"
             },
             phoneLabel = context.getString(R.string.outrasLocalidades),
