@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
 
         val registerButton: Button = binding.registerButton
         registerButton.setOnClickListener{
-            val whatsUrl = "https://api.whatsapp.com/send?phone=5511939466858"
+            val whatsUrl = "https://api.whatsapp.com/send?phone=5511975423721"
             val whatsIntent = Intent(Intent.ACTION_VIEW)
             whatsIntent.setData(Uri.parse(whatsUrl))
             startActivity(whatsIntent)

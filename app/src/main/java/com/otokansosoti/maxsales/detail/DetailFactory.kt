@@ -46,8 +46,7 @@ enum class DetailFactory {
                 MEDICAMENTOGRATIS -> "Assistência Medicamentos"
             },
             image = when (this) {
-                CONSULTA, EXAMES, DENTISTA -> "produto_saude"
-                MEDICAMENTOGRATIS -> "logo_sabemi"
+                CONSULTA, EXAMES, DENTISTA -> "logo_final_horizontal"
                 else -> "previsul"
             },
             text = when (this) {
@@ -68,14 +67,13 @@ enum class DetailFactory {
             },
             whatsappLabel = context.getString(R.string.capitais),
             whastappContent = when (this) {
-                PERSONALFITNESS, NUTRICIONAL, CHECKUP, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO -> "(11) 3003-6773"
+                PERSONALFITNESS, NUTRICIONAL, CHECKUP, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO, FUNERAL, MORTEACIDENTAL -> "(11) 3003-6773"
                 MEDICAMENTOGRATIS, PET -> "(51) 99528-0140"
                 CONSULTA, EXAMES, DENTISTA -> "(11) 93946-6858"
-                else -> "(11) 97292-2649"
             },
             phoneLabel = context.getString(R.string.outrasLocalidades),
             phoneContent = when (this) {
-                MORTEACIDENTAL, SORTEIO, AUTOMOTO, RESIDENCIAL, INSPECAO, FUNERAL -> "0800 709 8059"
+                CONSULTA, EXAMES, DENTISTA -> "0800 191 2486"
                 MEDICAMENTOGRATIS, PET -> "0800 880 1900"
                 else -> "0800 709 8059"
             }
